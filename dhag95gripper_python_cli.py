@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-dhag95gripper_cli.py  — ROS2-free version using RM_API2
+dhag95gripper_python_cli.py  — ROS2-free version using RM_API2
 
 目的
   - RM65 の RS485 に接続された DH Robotics AG95 グリッパーを、
@@ -18,15 +18,15 @@ RS485 ポート設定 (ARM_RS485_PORT):
   port = 1 : アーム末端の RS485  ← AG95 はここに接続 (デフォルト)
 
 使い方
-  python dhag95gripper_cli.py on                # Modbus初期化 + グリッパー初期化
-  python dhag95gripper_cli.py open              # 完全開き
-  python dhag95gripper_cli.py open --width 500  # 半開き (0-1000)
-  python dhag95gripper_cli.py close             # 閉じる
-  python dhag95gripper_cli.py off               # Modbus RTU モード解除
-  python dhag95gripper_cli.py status            # 現在状態の読み取り
+  python dhag95gripper_python_cli.py on                # Modbus初期化 + グリッパー初期化
+  python dhag95gripper_python_cli.py open              # 完全開き
+  python dhag95gripper_python_cli.py open --width 500  # 半開き (0-1000)
+  python dhag95gripper_python_cli.py close             # 閉じる
+  python dhag95gripper_python_cli.py off               # Modbus RTU モード解除
+  python dhag95gripper_python_cli.py status            # 現在状態の読み取り
 
-  python dhag95gripper_cli.py on --close-after-on  # 初期化後すぐ off する
-  python dhag95gripper_cli.py on --full-init        # 再初期化 (0xA5)
+  python dhag95gripper_python_cli.py on --close-after-on  # 初期化後すぐ off する
+  python dhag95gripper_python_cli.py on --full-init        # 再初期化 (0xA5)
 """
 
 from __future__ import annotations
